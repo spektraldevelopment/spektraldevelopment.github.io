@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -32,22 +33,30 @@ export default class Header extends React.Component {
                 
                 {/*Home*/}
                 <NavItem>
-                    <NavLink href="/">Home</NavLink>
+                    <NavLink href="#">
+                      <Link to={"/"}>Home</Link>
+                    </NavLink>
                 </NavItem>
                 
                 {/*About*/}
                 <NavItem>
-                    <NavLink href="#">About</NavLink>
+                    <NavLink href="#">
+                      <Link to={"/about"}>About</Link>
+                    </NavLink>
                 </NavItem>
 
                 {/*Projects*/}
                 <NavItem>
-                    <NavLink href="#">Projects</NavLink>
+                    <NavLink href="#">
+                      <Link to={"/projects"}>Projects</Link>
+                    </NavLink>
                 </NavItem>
 
                 {/*CV*/}
                 <NavItem>
-                    <NavLink href="#">CV</NavLink>
+                    <NavLink href="#">
+                      <Link to={"/cv"}>CV</Link>
+                    </NavLink>
                 </NavItem>
                 
             </Nav>

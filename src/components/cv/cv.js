@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class CV extends Component {
     render() {
         return(
-            <div>
+            <main>
                CV section
-            </div>
+            </main>
         );
     }
 }

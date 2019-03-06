@@ -7,16 +7,26 @@ import About from './components/about/about';
 import Projects from './components/projects/projects';
 import CV from './components/cv/cv';
 
+import background from './assets/blue-bg.jpg';
+
 class App extends Component {
+
   render() {
     return (
-      <header>
-        <Header />
+      <div style = {{ backgroundImage: `url(${background})`, 
+                      backgroundSize: 'cover', 
+                      backgroundPosition: 'center center',
+                      backgroundRepeat: 'no-repeat'
+                    }}>
+        <header>
+          <Header />
+        </header>
+
         <Route exact path="/" component={Main}/>
         <Route exact path="/about" component={About}/>
         <Route exact path="/projects" component={Projects}/>
         <Route exact path="/cv" component={CV}/>
-      </header>
+      </div>
     );
   }
 }

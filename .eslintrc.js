@@ -13,5 +13,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    "indent": "off",
+    "vue/html-indent": "off",
+    "comma-dangle": [2, "always-multiline"]
   }
 }

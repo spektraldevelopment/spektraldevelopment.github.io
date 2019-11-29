@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" app clipped color="blue darken-4">
       <v-list dense>
         <!--Iterate over links-->
-        <v-list-item v-for="link in links" :key="link.title" link>
+        <v-list-item v-for="link in links" :key="link.title" :to="link.to" link nuxt>
           <v-list-item-action>
             <v-icon color="white">{{ link.icon }}</v-icon>
           </v-list-item-action>
@@ -26,9 +26,9 @@ export default {
   data: () => ({
     drawer: null,
     links: [
-      { icon: 'mdi-view-dashboard', title: 'Projects' },
-      { icon: 'mdi-account-circle', title: 'About' },
-      { icon: 'mdi-email', title: 'Contact' }
+      { icon: 'mdi-view-dashboard', title: 'Projects', to: '/' },
+      { icon: 'mdi-account-circle', title: 'About', to: '/about' },
+      { icon: 'mdi-email', title: 'Contact', to: '/contact' }
     ]
   })
 }

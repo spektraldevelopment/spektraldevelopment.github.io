@@ -32,10 +32,6 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #000;
-}
-
 *,
 *:before,
 *:after {

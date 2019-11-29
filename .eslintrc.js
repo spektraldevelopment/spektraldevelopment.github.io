@@ -16,6 +16,7 @@ module.exports = {
     "indent": "off",
     "vue/html-indent": "off",
     "eol-last": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "vue/singleline-html-element-content-newline" : "off"
   }
 }

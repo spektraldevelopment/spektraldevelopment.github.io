@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     "indent": "off",
     "vue/html-indent": "off",
-    "comma-dangle": [2, "always-multiline"]
+    "eol-last": "off",
+    "comma-dangle": "off"
   }
 }

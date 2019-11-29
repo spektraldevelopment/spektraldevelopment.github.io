@@ -1,12 +1,5 @@
 <template>
-  <v-app id="inspire">
-    <v-content dark>
-      <v-container class="fill-height" fluid></v-container>
-    </v-content>
-  </v-app>
+  <v-content>
+    <v-container class="fill-height" fluid></v-container>
+  </v-content>
 </template>
-
-<script>
-export default {
-}
-</script>

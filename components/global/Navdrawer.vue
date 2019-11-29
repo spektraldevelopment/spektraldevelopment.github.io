@@ -1,5 +1,4 @@
 <template>
-  <div>
     <v-navigation-drawer v-model="drawer" app clipped dark>
       <v-list dense>
         <!--Projects link-->
@@ -31,18 +30,20 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-
-    <v-app-bar app clipped-left dark>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
-    </v-app-bar>
-  </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    drawer: null
-  })
+  props: {
+    theDrawer: {
+      type: Boolean,
+      required: true
+    }
+  },
+  computed: {
+      drawer () {
+          return this.drawer = !this.drawer
+      }
+  }
 }
 </script>

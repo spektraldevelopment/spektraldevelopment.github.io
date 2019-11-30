@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="app-background">
     <Header />
     <nuxt />
     <Footer />
@@ -37,5 +37,9 @@ html {
 *:after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.app-background {
+  background-color: #171717 !important;
 }
 </style>

@@ -18,6 +18,10 @@ module.exports = {
     "eol-last": "off",
     "comma-dangle": "off",
     "vue/singleline-html-element-content-newline" : "off",
-    "vue/html-self-closing": "off"
+    "vue/html-self-closing": "off",
+    "space-before-function-paren": "off",
+    "semi": "off",
+    "quotes": "off",
+    "vue/max-attributes-per-line": "off"
   }
 }

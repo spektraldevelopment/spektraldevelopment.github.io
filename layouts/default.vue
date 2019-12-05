@@ -1,28 +1,29 @@
 <template>
-  <v-app class="app-background">
+  <v-app class="app-background" fluid>
     <Header />
-    <nuxt />
+    <transition name="fade" mode="in-out">
+      <nuxt />
+    </transition>
     <Footer />
   </v-app>
 </template>
 
 <script>
-
-import Header from '@/components/global/Header'
-import Footer from '@/components/global/Footer'
+import Header from "@/components/global/Header";
+import Footer from "@/components/global/Footer";
 
 export default {
   components: {
     Header,
     Footer
   }
-}
+};
 </script>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -39,7 +40,15 @@ html {
   margin: 0;
 }
 
-.app-background {
-  background-color: #171717 !important;
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 1s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 </style>

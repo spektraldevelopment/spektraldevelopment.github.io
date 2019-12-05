@@ -1,0 +1,3 @@
+@import '~vuetify/src/styles/styles.sass';
+
+$material-light: map-merge($material-light, (background: map-get($blue-grey, 'darken-4')));

@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import Callout from '@/components/global/Callout'
+import Callout from "@/components/global/Callout";
 export default {
   components: {
     Callout
   }
-}
+};
 </script>

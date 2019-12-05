@@ -1,3 +1,4 @@
+import colors from 'vuetify/lib/util/colors'
 
 export default {
   mode: 'universal',
@@ -50,6 +51,13 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+  },
+  /*
+  ** Vuetify module configuration
+  */
+  vuetify: {
+    treeShake: true,
+    customVariables: ['~/assets/style/variables.scss']
   },
   /*
   ** Build configuration

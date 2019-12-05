@@ -22,6 +22,7 @@ module.exports = {
     "space-before-function-paren": "off",
     "semi": "off",
     "quotes": "off",
-    "vue/max-attributes-per-line": "off"
+    "vue/max-attributes-per-line": "off",
+    "arrow-parens": "off"
   }
 }

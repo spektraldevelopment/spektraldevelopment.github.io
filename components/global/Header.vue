@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app clipped color="blue darken-4">
+    <v-navigation-drawer v-model="drawer" app clipped temporary color="blue darken-4">
       <v-list dense>
         <!--Iterate over links-->
         <v-list-item v-for="link in links" :key="link.title" :to="link.to" link nuxt>
@@ -28,7 +28,8 @@ export default {
     links: [
       { icon: 'mdi-view-dashboard', title: 'Projects', to: '/' },
       { icon: 'mdi-account-circle', title: 'About', to: '/about' },
-      { icon: 'mdi-email', title: 'Contact', to: '/contact' }
+      { icon: 'mdi-email', title: 'Contact', to: '/contact' },
+      { icon: 'mdi-pencil', title: 'Create Post', to: '/create-post' }
     ]
   })
 }

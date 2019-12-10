@@ -1,5 +1,5 @@
 <template>
-  <v-card class="blue darken-4">
+  <v-card height="100%" class="black" @click="onMore">
     <v-img :src="card.image" class="white--text align-end" height="150px">
       <v-card-title>{{ card.title }}</v-card-title>
     </v-img>
@@ -7,7 +7,7 @@
       <p class="white--text ma-0">{{ card.description }}</p>
     </v-card-text>
     <v-card-actions>
-      <v-btn class="white--text" text>More</v-btn>
+      <v-btn class="white--text" @click="onMore" text>More</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -18,6 +18,11 @@ export default {
     card: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    onMore() {
+      this.$router.push(`/project/${this.card.id}`)
     }
   }
 };

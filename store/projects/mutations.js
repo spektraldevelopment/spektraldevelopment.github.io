@@ -4,5 +4,8 @@ export default {
     },
     setProjectsLoaded(state, loaded) {
         state.projectsLoaded = loaded;
-    }
+    },
+    addProject(state, project) {
+        state.projects.unshift(project);
+    },
 }

@@ -8,7 +8,7 @@
       </v-row>
       <v-row justify="center" align="center">
         <v-col cols="8">
-          <PostForm />
+          <ProjectForm />
         </v-col>
       </v-row>
     </v-container>
@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import PostForm from "@/components/post/PostForm";
+import ProjectForm from "@/components/project/ProjectForm";
 export default {
   components: {
-    PostForm
+    ProjectForm
   }
 };
 </script>

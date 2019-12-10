@@ -9,12 +9,20 @@
           <h2 class="white--text pt-5">Here is some of my work</h2>
         </v-col>
       </v-row>
-      <!--Projects Cards-->
-      <v-row class="pa-4">
-        <v-col v-show="!projectsLoaded" cols="12" md="4">
+      <v-row v-show="!projectsLoaded" class="pa-4">
+        <v-col cols="12" md="4">
           <v-skeleton-loader type="card"></v-skeleton-loader>
         </v-col>
-        <v-col v-for="(card, index) in cards" :key="index" cols="12" md="4">
+        <v-col cols="12" md="4">
+          <v-skeleton-loader type="card"></v-skeleton-loader>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-skeleton-loader type="card"></v-skeleton-loader>
+        </v-col>
+      </v-row>
+      <!--Projects Cards-->
+      <v-row class="pa-4">
+        <v-col v-for="(card, index) in projects" :key="index" cols="12" md="4">
           <ProjectCard :card="card" />
         </v-col>
       </v-row>
@@ -34,7 +42,7 @@ export default {
   computed: {
     ...mapGetters({
       projectsLoaded: "projects/projectsLoaded",
-      cards: "projects/projects",
+      projects: "projects/projects",
       calloutTitle: "projects/calloutTitle",
       calloutTagline: "projects/calloutTagline",
       calloutAvatar: "projects/calloutAvatar"

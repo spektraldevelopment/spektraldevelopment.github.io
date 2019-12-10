@@ -29,7 +29,7 @@ export default {
       { icon: 'mdi-view-dashboard', title: 'Projects', to: '/' },
       { icon: 'mdi-account-circle', title: 'About', to: '/about' },
       { icon: 'mdi-email', title: 'Contact', to: '/contact' },
-      { icon: 'mdi-pencil', title: 'Create Post', to: '/create-post' }
+      { icon: 'mdi-pencil', title: 'Create Project', to: '/create-project' }
     ]
   })
 }

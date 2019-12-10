@@ -7,14 +7,21 @@
       </v-row>
       <v-row justify="center" align="center">
         <v-col class="py-5" cols="10" md="8">
-          <p
-            class="white--text"
-          >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fugit facere ab mollitia vitae quibusdam aliquid, assumenda, molestias harum quas perspiciatis iusto quidem quo aspernatur ipsam est veniam? Laudantium, deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur debitis beatae cumque eos rem earum vero placeat repudiandae accusamus dolorem, hic esse consequatur, adipisci laudantium iste harum atque tempora! Odio?</p>
+          <p class="white--text">{{ description }}</p>
+        </v-col>
+      </v-row>
+      <v-row justify="center" align="center">
+        <v-col class="py-5" cols="5" md="4">
           <v-btn v-if="link" @click="onLinkClick" solo>
             <v-icon class="mr-1">mdi-application</v-icon>Visit
           </v-btn>
-          <v-btn @click="onEditClick" solo>
+        </v-col>
+        <v-col class="py-5" cols="5" md="4">
+          <v-btn @click="onEditClick" solo class="success">
             <v-icon class="mr-1">mdi-pencil</v-icon>Edit
+          </v-btn>
+          <v-btn @click="onDeleteClick" solo class="error">
+            <v-icon class="mr-1">mdi-delete-forever</v-icon>Delete
           </v-btn>
         </v-col>
       </v-row>
@@ -23,7 +30,7 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 import Banner from "@/components/global/Banner";
 export default {
   components: {
@@ -52,11 +59,19 @@ export default {
     this.link = projectData[0].link;
   },
   methods: {
+    ...mapActions({
+      deleteProject: "projects/DELETE_PROJECT"
+    }),
     onLinkClick() {
       window.open(this.link, "_blank");
     },
     onEditClick() {
       this.$router.push(`/edit/${this.$route.params.id}`);
+    },
+    onDeleteClick() {
+      this.deleteProject(this.$route.params.id).then(() => {
+        this.$router.push("/");
+      });
     }
   }
 };

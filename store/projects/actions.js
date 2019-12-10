@@ -59,5 +59,17 @@ export default {
             .catch(err => {
                 console.error(err);
             });
+    },
+    DELETE_PROJECT({
+        commit
+    }, projectID) {
+        return axios
+            .delete(`https://portfolio-6a205.firebaseio.com/project/${projectID}.json`)
+            .then(result => {
+                commit('deleteProject', projectID);
+            })
+            .catch(err => {
+                console.error(err);
+            });
     }
 }

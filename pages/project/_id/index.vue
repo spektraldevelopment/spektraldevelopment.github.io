@@ -10,7 +10,12 @@
           <p
             class="white--text"
           >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia fugit facere ab mollitia vitae quibusdam aliquid, assumenda, molestias harum quas perspiciatis iusto quidem quo aspernatur ipsam est veniam? Laudantium, deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur debitis beatae cumque eos rem earum vero placeat repudiandae accusamus dolorem, hic esse consequatur, adipisci laudantium iste harum atque tempora! Odio?</p>
-            <v-btn v-if="link" @click="onLinkClick" solo><v-icon class="mr-1">mdi-application</v-icon>Visit</v-btn>
+          <v-btn v-if="link" @click="onLinkClick" solo>
+            <v-icon class="mr-1">mdi-application</v-icon>Visit
+          </v-btn>
+          <v-btn @click="onEditClick" solo>
+            <v-icon class="mr-1">mdi-pencil</v-icon>Edit
+          </v-btn>
         </v-col>
       </v-row>
     </v-container>
@@ -26,11 +31,11 @@ export default {
   },
   data() {
     return {
-      title: '',
-      image: '',
-      description: '',
-      link: ''
-    }
+      title: "",
+      image: "",
+      description: "",
+      link: ""
+    };
   },
   computed: {
     ...mapGetters({
@@ -38,17 +43,20 @@ export default {
     })
   },
   mounted() {
-      const projectData = this.projects.filter(project => project.id === this.$route.params.id);
-      this.title = projectData[0].title;
-      this.image = projectData[0].image;
-      this.description = projectData[0].description;
-      this.link = projectData[0].link;
-
-      console.log(this.link);
+    const projectData = this.projects.filter(
+      project => project.id === this.$route.params.id
+    );
+    this.title = projectData[0].title;
+    this.image = projectData[0].image;
+    this.description = projectData[0].description;
+    this.link = projectData[0].link;
   },
   methods: {
     onLinkClick() {
       window.open(this.link, "_blank");
+    },
+    onEditClick() {
+      this.$router.push(`/edit/${this.$route.params.id}`);
     }
   }
 };

@@ -42,5 +42,22 @@ export default {
             .catch(err => {
                 console.error(err);
             });
+    },
+    UPDATE_PROJECT({
+        commit
+    }, putData) {
+        const updatedPost = {
+            ...putData,
+            updatedDate: new Date()
+        };
+
+        return axios
+            .put(`https://portfolio-6a205.firebaseio.com/project/${updatedPost.id}.json`, updatedPost)
+            .then(result => {
+                commit('editProject', updatedPost);
+            })
+            .catch(err => {
+                console.error(err);
+            });
     }
 }

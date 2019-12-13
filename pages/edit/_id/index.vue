@@ -9,7 +9,6 @@
       <v-row justify="center" align="center">
         <v-col cols="8">
           <ProjectForm
-            formType="edit"
             @submitForm="onFormSubmit"
             :title="title"
             @updateTitle="onTitleUpdate"
@@ -19,6 +18,8 @@
             @updateDescription="onDescUpdate"
             :link="link"
             @updateLink="onLinkUpdate"
+            @cancel="onFormCancel"
+            form-type="edit"
           />
         </v-col>
       </v-row>
@@ -81,6 +82,9 @@ export default {
         }).then(() => {
           this.$router.push("/");
         });
+    },
+    onFormCancel() {
+      this.$router.push("/");
     }
   }
 };

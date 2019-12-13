@@ -23,6 +23,7 @@ module.exports = {
     "semi": "off",
     "quotes": "off",
     "vue/max-attributes-per-line": "off",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "no-console": "off"
   }
 }

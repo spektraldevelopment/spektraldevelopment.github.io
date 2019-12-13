@@ -3,11 +3,11 @@
     <v-container pa-0 fluid>
       <v-row justify="center" align="center">
         <v-col cols="8">
-          <h1 class="white--text text-center">Create a project</h1>
+          <h1 class="white--text text-center mt-4">Create a project</h1>
         </v-col>
       </v-row>
       <v-row justify="center" align="center">
-        <v-col cols="8">
+        <v-col cols="12" sm="8">
           <ProjectForm
             @submitForm="onFormSubmit"
             :title="title"
@@ -18,6 +18,7 @@
             @updateDescription="onDescUpdate"
             :link="link"
             @updateLink="onLinkUpdate"
+            @cancel="onFormCancel"
           />
         </v-col>
       </v-row>
@@ -58,13 +59,16 @@ export default {
     },
     onFormSubmit() {
       this.setProject({
-          title: this.title,
-          image: this.image,
-          description: this.description,
-          link: this.link === '' ? undefined : this.link
-        }).then(() => {
-          this.$router.push("/");
-        });
+        title: this.title,
+        image: this.image,
+        description: this.description,
+        link: this.link === "" ? undefined : this.link
+      }).then(() => {
+        this.$router.push("/");
+      });
+    },
+    onFormCancel() {
+      this.$router.push("/");
     }
   }
 };

@@ -2,7 +2,7 @@
   <v-row justify="center" align="center">
     <v-col class="pa-0" cols="12">
       <v-img :src="image" max-height="350" class="align-end">
-        <h1 class="white--text ml-4">{{ title }}</h1>
+        <h1 class="white--text ma-4 pl-4">{{ title }}</h1>
       </v-img>
     </v-col>
   </v-row>

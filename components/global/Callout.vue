@@ -61,18 +61,24 @@ export default {
 }
 
 .avatar {
-  max-width: 75%;
+  max-width: 50%;
 }
 
-@media all and (max-width: 960px) {
+@media all and (min-width: 600px) {
   .avatar {
-    max-width: 50%;
+    max-width: 35%;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .avatar {
+    max-width: 75%;
   }
 }
 
 .fade-enter-active,
 .fade-leave-active {
-  transition-duration: 1s;
+  transition-duration: 2s;
   transition-property: opacity;
   transition-timing-function: ease;
 }

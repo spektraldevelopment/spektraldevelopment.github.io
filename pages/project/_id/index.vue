@@ -3,20 +3,20 @@
     <v-container pa-0 fluid>
       <Banner :title="title" :image="image" />
       <v-row justify="center" align="center">
-        <v-col cols="10" md="8"></v-col>
+        <v-col cols="10" sm="8"></v-col>
       </v-row>
       <v-row justify="center" align="center">
-        <v-col class="py-5" cols="10" md="8">
+        <v-col cols="10" sm="8">
           <p class="white--text">{{ description }}</p>
         </v-col>
       </v-row>
       <v-row justify="center" align="center">
-        <v-col class="py-5" cols="5" md="4">
+        <v-col cols="10" sm="8">
           <v-btn v-if="link" @click="onLinkClick" solo>
             <v-icon class="mr-1">mdi-application</v-icon>Visit
           </v-btn>
         </v-col>
-        <v-col class="py-5" cols="5" md="4">
+        <v-col cols="10" sm="8">
           <v-btn @click="onEditClick" solo class="success">
             <v-icon class="mr-1">mdi-pencil</v-icon>Edit
           </v-btn>

@@ -4,5 +4,6 @@ export default () => ({
         calloutAvatar: '/images/my-avatar.jpg',
         calloutAvtAlt: 'Hello I\'m Dave Boyle',
         projects: [],
+        allProjects: [],
         projectsLoaded: false
 })

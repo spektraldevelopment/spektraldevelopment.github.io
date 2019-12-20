@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   data() {
     return {
@@ -99,6 +100,26 @@ export default {
         console.log("Name: ", this.name);
         console.log("Email: ", this.email);
         console.log("Message: ", this.message);
+
+        const data = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+          subject: this.subject
+        };
+
+        axios
+          .post(
+            "https://us-central1-portfolio-6a205.cloudfunctions.net/submit",
+            data
+          )
+          .then(res => {
+            // here will be code
+            console.log(res);
+          })
+          .catch(error => {
+            console.error(error);
+          });
       }
     },
     validateField() {

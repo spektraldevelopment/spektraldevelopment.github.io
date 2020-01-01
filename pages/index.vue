@@ -6,7 +6,7 @@
       <!--Tagline-->
       <v-row justify="center" align="center">
         <v-col cols="8" class="text-center">
-          <fade delay="0.25">
+          <fade :delay="0.25">
             <h2 class="white--text pt-5">Here is some of my work</h2>
           </fade>
         </v-col>
